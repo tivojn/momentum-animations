@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conservation of Momentum - Interactive Physics Animations</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/shadcn/shadcn-bw.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Conservation of Momentum</h1>
+      <h2>Interactive Physics Animations for Middle School</h2>
+    </header>
+    
+    <nav>
+      <a href="#intro" class="active">Introduction</a>
+      <a href="#elastic-1d">Elastic Collision (1D)</a>
+      <a href="#inelastic-1d">Inelastic Collision (1D)</a>
+      <a href="#collision-2d">2D Collision</a>
+      <a href="#explosion">Explosion</a>
+      <a href="#rocket">Rocket Propulsion</a>
+    </nav>
+    
+    <main>
+      <section id="intro" class="slide active">
+        <h2>What is Conservation of Momentum?</h2>
+        <div class="content">
+          <div class="text-content">
+            <p>The Law of Conservation of Momentum states that in a closed system, the total momentum before and after an event (such as a collision) remains the same if no external forces act upon the system.</p>
+            <p>Momentum (p) is defined as the product of an object's mass (m) and velocity (v):</p>
+            <div class="formula">p = m × v</div>
+            <p>For a system of objects, the total momentum is the sum of individual momentums:</p>
+            <div class="formula">p<sub>total</sub> = p<sub>1</sub> + p<sub>2</sub> + p<sub>3</sub> + ...</div>
+          </div>
+          <div class="illustration">
+            <div class="placeholder">
+              <!-- Introduction animation will go here -->
+              Introduction animation loading...
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="elastic-1d" class="slide">
+        <h2>One-dimensional Elastic Collision</h2>
+        <div class="content">
+          <div class="animation-container">
+            <div id="elastic-1d-animation" class="animation">
+              <!-- Animation canvas will be inserted here -->
+              Animation loading...
+            </div>
+            <div class="controls">
+              <div class="control-group">
+                <label for="elastic-mass1">Mass 1:</label>
+                <input type="range" id="elastic-mass1" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="elastic-mass2">Mass 2:</label>
+                <input type="range" id="elastic-mass2" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="elastic-velocity1">Velocity 1:</label>
+                <input type="range" id="elastic-velocity1" min="-10" max="10" value="5" step="1">
+                <span class="value">5 m/s</span>
+              </div>
+              <div class="control-group">
+                <label for="elastic-velocity2">Velocity 2:</label>
+                <input type="range" id="elastic-velocity2" min="-10" max="10" value="-3" step="1">
+                <span class="value">-3 m/s</span>
+              </div>
+              <button id="elastic-start">Start</button>
+              <button id="elastic-reset">Reset</button>
+            </div>
+          </div>
+          <div class="explanation">
+            <h3>What's happening?</h3>
+            <p>In an elastic collision, both momentum and kinetic energy are conserved. The objects bounce off each other, exchanging energy and momentum.</p>
+            <p>Formula for conservation of momentum:</p>
+            <div class="formula">m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</div>
+            <div class="momentum-display">
+              <div class="before">
+                <h4>Before Collision</h4>
+                <p>Momentum 1: <span id="elastic-p1-before">25 kg·m/s</span></p>
+                <p>Momentum 2: <span id="elastic-p2-before">-15 kg·m/s</span></p>
+                <p>Total: <span id="elastic-total-before">10 kg·m/s</span></p>
+              </div>
+              <div class="after">
+                <h4>After Collision</h4>
+                <p>Momentum 1: <span id="elastic-p1-after">-15 kg·m/s</span></p>
+                <p>Momentum 2: <span id="elastic-p2-after">25 kg·m/s</span></p>
+                <p>Total: <span id="elastic-total-after">10 kg·m/s</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Similar sections for the other animations will be added -->
+      <section id="inelastic-1d" class="slide">
+        <h2>One-dimensional Inelastic Collision</h2>
+        <div class="content">
+          <div class="animation-container">
+            <div id="inelastic-1d-animation" class="animation">
+              <!-- Animation canvas will be inserted here -->
+              Animation loading...
+            </div>
+            <div class="controls">
+              <div class="control-group">
+                <label for="inelastic-mass1">Mass 1:</label>
+                <input type="range" id="inelastic-mass1" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="inelastic-mass2">Mass 2:</label>
+                <input type="range" id="inelastic-mass2" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="inelastic-velocity1">Velocity 1:</label>
+                <input type="range" id="inelastic-velocity1" min="-10" max="10" value="5" step="1">
+                <span class="value">5 m/s</span>
+              </div>
+              <div class="control-group">
+                <label for="inelastic-velocity2">Velocity 2:</label>
+                <input type="range" id="inelastic-velocity2" min="-10" max="10" value="-3" step="1">
+                <span class="value">-3 m/s</span>
+              </div>
+              <button id="inelastic-start">Start</button>
+              <button id="inelastic-reset">Reset</button>
+            </div>
+          </div>
+          <div class="explanation">
+            <h3>What's happening?</h3>
+            <p>In a completely inelastic collision, the objects stick together after colliding. Momentum is still conserved, but kinetic energy is not.</p>
+            <p>Formula for conservation of momentum:</p>
+            <div class="formula">m₁v₁ + m₂v₂ = (m₁ + m₂)v'</div>
+            <div class="momentum-display">
+              <div class="before">
+                <h4>Before Collision</h4>
+                <p>Momentum 1: <span id="inelastic-p1-before">25 kg·m/s</span></p>
+                <p>Momentum 2: <span id="inelastic-p2-before">-15 kg·m/s</span></p>
+                <p>Total: <span id="inelastic-total-before">10 kg·m/s</span></p>
+              </div>
+              <div class="after">
+                <h4>After Collision</h4>
+                <p>Combined Momentum: <span id="inelastic-combined-after">10 kg·m/s</span></p>
+                <p>Combined Velocity: <span id="inelastic-velocity-after">1 m/s</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="collision-2d" class="slide">
+        <h2>Two-dimensional Collision</h2>
+        <div class="content">
+          <div class="animation-container">
+            <div id="collision-2d-animation" class="animation">
+              <!-- Animation canvas will be inserted here -->
+              Animation loading...
+            </div>
+            <div class="controls">
+              <div class="control-group">
+                <label for="collision2d-mass1">Mass 1:</label>
+                <input type="range" id="collision2d-mass1" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="collision2d-mass2">Mass 2:</label>
+                <input type="range" id="collision2d-mass2" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="collision2d-angle">Collision Angle:</label>
+                <input type="range" id="collision2d-angle" min="0" max="90" value="45" step="5">
+                <span class="value">45°</span>
+              </div>
+              <button id="collision2d-start">Start</button>
+              <button id="collision2d-reset">Reset</button>
+            </div>
+          </div>
+          <div class="explanation">
+            <h3>What's happening?</h3>
+            <p>In two-dimensional collisions, momentum is conserved in both the x and y directions separately.</p>
+            <p>This means:</p>
+            <div class="formula">m₁v₁ₓ + m₂v₂ₓ = m₁v₁ₓ' + m₂v₂ₓ'</div>
+            <div class="formula">m₁v₁ᵧ + m₂v₂ᵧ = m₁v₁ᵧ' + m₂v₂ᵧ'</div>
+            <div class="momentum-display">
+              <div class="before">
+                <h4>Before Collision</h4>
+                <p>Total Momentum (x): <span id="collision2d-px-before">25 kg·m/s</span></p>
+                <p>Total Momentum (y): <span id="collision2d-py-before">0 kg·m/s</span></p>
+              </div>
+              <div class="after">
+                <h4>After Collision</h4>
+                <p>Total Momentum (x): <span id="collision2d-px-after">25 kg·m/s</span></p>
+                <p>Total Momentum (y): <span id="collision2d-py-after">0 kg·m/s</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="explosion" class="slide">
+        <h2>Explosion/Separation Example</h2>
+        <div class="content">
+          <div class="animation-container">
+            <div id="explosion-animation" class="animation">
+              <!-- Animation canvas will be inserted here -->
+              Animation loading...
+            </div>
+            <div class="controls">
+              <div class="control-group">
+                <label for="explosion-mass">Initial Mass:</label>
+                <input type="range" id="explosion-mass" min="5" max="20" value="10" step="1">
+                <span class="value">10 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="explosion-fragments">Number of Fragments:</label>
+                <input type="range" id="explosion-fragments" min="2" max="6" value="3" step="1">
+                <span class="value">3</span>
+              </div>
+              <div class="control-group">
+                <label for="explosion-force">Explosion Force:</label>
+                <input type="range" id="explosion-force" min="1" max="10" value="5" step="1">
+                <span class="value">5</span>
+              </div>
+              <button id="explosion-start">Start</button>
+              <button id="explosion-reset">Reset</button>
+            </div>
+          </div>
+          <div class="explanation">
+            <h3>What's happening?</h3>
+            <p>In an explosion, a single object breaks apart into multiple fragments. The total momentum before and after remains the same.</p>
+            <p>If the initial object is at rest, the total momentum is zero, so the sum of all fragment momentums must also equal zero:</p>
+            <div class="formula">p<sub>total</sub> = p₁ + p₂ + p₃ + ... = 0</div>
+            <div class="momentum-display">
+              <div class="before">
+                <h4>Before Explosion</h4>
+                <p>Initial Momentum: <span id="explosion-p-before">0 kg·m/s</span></p>
+              </div>
+              <div class="after">
+                <h4>After Explosion</h4>
+                <p>Fragment 1: <span id="explosion-p1-after">6.5 kg·m/s</span></p>
+                <p>Fragment 2: <span id="explosion-p2-after">-8.2 kg·m/s</span></p>
+                <p>Fragment 3: <span id="explosion-p3-after">1.7 kg·m/s</span></p>
+                <p>Total: <span id="explosion-total-after">0 kg·m/s</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="rocket" class="slide">
+        <h2>Rocket Propulsion</h2>
+        <div class="content">
+          <div class="animation-container">
+            <div id="rocket-animation" class="animation">
+              <!-- Animation canvas will be inserted here -->
+              Animation loading...
+            </div>
+            <div class="controls">
+              <div class="control-group">
+                <label for="rocket-mass">Rocket Mass:</label>
+                <input type="range" id="rocket-mass" min="5" max="20" value="10" step="1">
+                <span class="value">10 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="rocket-fuel">Fuel Amount:</label>
+                <input type="range" id="rocket-fuel" min="1" max="10" value="5" step="1">
+                <span class="value">5 kg</span>
+              </div>
+              <div class="control-group">
+                <label for="rocket-exhaust">Exhaust Velocity:</label>
+                <input type="range" id="rocket-exhaust" min="1" max="10" value="5" step="1">
+                <span class="value">5 m/s</span>
+              </div>
+              <button id="rocket-start">Launch</button>
+              <button id="rocket-reset">Reset</button>
+            </div>
+          </div>
+          <div class="explanation">
+            <h3>What's happening?</h3>
+            <p>Rocket propulsion is a real-world application of conservation of momentum. As a rocket expels exhaust gases in one direction, it experiences a thrust force in the opposite direction.</p>
+            <p>The rocket equation demonstrates how momentum is conserved:</p>
+            <div class="formula">M<sub>rocket</sub> × v<sub>rocket</sub> + M<sub>exhaust</sub> × v<sub>exhaust</sub> = 0</div>
+            <p>This is a practical example of Newton's Third Law: For every action, there is an equal and opposite reaction.</p>
+            <div class="momentum-display">
+              <div class="after">
+                <h4>During Flight</h4>
+                <p>Rocket Momentum: <span id="rocket-p-rocket">50 kg·m/s</span></p>
+                <p>Exhaust Momentum: <span id="rocket-p-exhaust">-50 kg·m/s</span></p>
+                <p>Total: <span id="rocket-p-total">0 kg·m/s</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Conservation of Momentum Interactive Animations - Created for Middle School Physics Education</p>
+    </footer>
+  </div>
+
+  <script type="module" src="js/theme.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
